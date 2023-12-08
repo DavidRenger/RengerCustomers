@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox spacing="10.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.shingi.controllers.CustomerListController">
+   <children>
+      <ListView fx:id="customersListView" prefHeight="200.0" prefWidth="300.0" />
+      <VBox prefWidth="150.0" spacing="5.0">
+         <children>
+            <Label text="Filter">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="filterUncheckedCustomers" alignment="TOP_LEFT" mnemonicParsing="false" text="Niet-verwerkte klanten" wrapText="true" />
+            <RadioButton fx:id="filterCheckedCustomers" mnemonicParsing="false" text="Verwerkte klanten" />
+            <RadioButton fx:id="filterAllCustomers" mnemonicParsing="false" text="Alle klanten" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefWidth="300.0" spacing="30.0">
+         <children>
+            <HBox alignment="CENTER" spacing="50.0">
+               <children>
+                  <Button fx:id="previousCustomerButton" mnemonicParsing="false" onAction="#handlePreviousCustomerButton" prefHeight="25.0" prefWidth="80.0" text="Vorige" />
+                  <Button fx:id="nextCustomerButton" mnemonicParsing="false" onAction="#handleNextCustomerButton" prefHeight="25.0" prefWidth="80.0" text="Volgende">
+                     <tooltip>
+                        <Tooltip text="Als de status, rechtsvorm, en het boekhoudpakket zijn ingevuld, wordt de customer op verwerkt gezet." />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <ProgressBar fx:id="progressBar" prefHeight="20.0" prefWidth="200.0" progress="0.0" />
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </VBox>
+   </children>
+</HBox>

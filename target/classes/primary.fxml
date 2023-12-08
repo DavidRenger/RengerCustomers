@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.shingi.controllers.PrimaryController">
+   <children>
+      <Label fx:id="customerNameLabel" alignment="CENTER" prefHeight="100.0" prefWidth="1280.0" style="&#10;" text="Selecteer een klant" textAlignment="CENTER" wrapText="false">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="50.0" />
+         </VBox.margin>
+      </Label>
+      <HBox fx:id="contentHBox" alignment="CENTER">
+         <children>
+            <fx:include source="customer_details_subscene.fxml" />
+         </children>
+      </HBox>
+      <Region prefHeight="30.0" />
+      <HBox alignment="CENTER">
+         <children>
+            <fx:include source="customer_list_subscene.fxml" />
+            <Region prefWidth="95.0" />
+            <fx:include source="snapshot_list_subscene.fxml" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
